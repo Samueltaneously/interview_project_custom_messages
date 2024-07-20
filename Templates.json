@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "style": "cheerful",
+        "message": "Hi, {firstName}! We're so glad you chose us at {companyName}! We've prepared your room, number {roomNumber}, with care. Please enjoy your stay, and let us know if we can help with anything at all!"
+    },
+    {
+        "id": 2,
+        "style": "professional",
+        "message": "Hello {firstName}, Thank you for selecting {companyName} for your stay. Your room, assigned number {roomNumber}, has been meticulously prepared for your comfort. Please don't hesitate to reach out if there is anything we can assist you with during your stay."
+    }
+]
