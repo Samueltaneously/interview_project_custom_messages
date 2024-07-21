@@ -14,14 +14,14 @@ const App = () => {
     const [selectedCompanyId, setSelectedCompanyId] = useState(null);
     const [message, setMessage] = useState(null);
 
-    const hancleCreateMessage = () => {
+    const handleCreateMessage = () => {
 
-        if (selectedTemplate === null || selectedGuestId == null || selectedCompanyId === null) {
-            alert('Please ensure you select a message template, guest, and company.');
+        if (selectedTemplate === null || selectedGuestId === null || selectedCompanyId === null) {
+            alert('Please ensure you select a Message Template, Guest, and Company.');
             return;
         }
 
-        const guest = guests.find(guest => guests.id === selectedGuestId);
+        const guest = guests.find(guest => guest.id === selectedGuestId);
         const company = companies.find(company => company.id === selectedCompanyId);
 
         if (guest && company) {
@@ -52,6 +52,51 @@ const App = () => {
             setMessage(constructedMessage);
         }
     };
-}
+
+    return (
+        <div>
+
+            <div>
+                <h1>Select Template</h1>
+                <select onChange={(e) => setSelectedTemplate(templates.find(template => template.id === Number(e.target.value)) || null)}>
+                    <option value=''>Select a Template</option>
+                    {templates.map(template => (
+                        <option key={template.id} value={template.id}>{template.style}</option>
+                    ))}
+                </select>
+            </div>
+
+            <div>
+                <h1>Select Guest</h1>
+                <select onChange={(e) => setSelectedGuestId(Number(e.target.value))}>
+                    <option value=''>Select a Guest</option>
+                    {guests.map(guest => (
+                        <option key={guest.id} value={guest.id}>{guest.firstName} {guest.lastName}</option>
+                    ))}
+                </select>
+            </div>
+
+            <div>
+                <h1>Select Company</h1>
+                <select onChange={(e) => setSelectedCompanyId(Number(e.target.value))}>
+                    <option value=''>Select a Company</option>
+                    {companies.map(company => (
+                        <option key={company.id} value={company.id}>{company.company}</option>
+                    ))}
+                </select>
+            </div>
+
+            <button onClick={handleCreateMessage}>Create Your Message!</button>
+
+            {message && (
+                <div>
+                    <h1>Your Message:</h1>
+                    <p>{message}</p>
+                </div>
+            )}
+
+        </div>
+    );
+};
 
 export default App;
