@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Message Template App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This React application allows users to create and customize message templates. The app integrates guest and company data to generate personalized messages based on the selected template. Users can also add their own custom templates.
 
-In the project directory, you can run:
+## Instructions for Running the Program
 
-### `npm start`
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Start the App:**
+   ```bash
+   npm start
+   ```
 
-### `npm test`
+The app will run on http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Design Decisions
 
-### `npm run build`
+React Framework: The application is built using React for its efficient state management.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+State Management: React's useState hook is used to manage the state of selected templates, guests, companies, and the generated message.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Moment.js: Moment.js, along with Moment Timezone, is used to handle the time-related functions of converting timestamps and Timezones for generating appropriate greetings based on the time of day.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Language Choice
 
-### `npm run eject`
+JavaScript & React: React was chosen due to ease of creating interactive UIs, and efficient state management. JavaScript is a modern and popular web app language, with many built in methods that help streamline the coding.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Verifying Program Correctness
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Due to the simple nature of the app's scope, manual and integration testing were primarily implemented. The simple GUI aided in verifying all items populated and could be edited correctly. Edge cases were considered, and even demanded the implementation of the Moment library to account for proper timezone cases.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## What to Do With More Time
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+With more time a backend could be implemented to allow the user's generated template to be stored to the JSON file, rather than as it currently is (in React State which does not save from one instance to the next). A Nicer GUI, with more options, and perhaps a search function would also be ideal to streamline user interface. 
