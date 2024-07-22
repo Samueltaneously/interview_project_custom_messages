@@ -42,4 +42,4 @@ Due to the simple nature of the app's scope, manual and integration testing were
 
 ## What to Do With More Time
 
-With more time a backend could be implemented to allow the user's generated template to be stored to the JSON file, rather than as it currently is (in React State which does not save from one instance to the next). A Nicer GUI, with more options, and perhaps a search function would also be ideal to streamline user interface. 
+With more time a backend could be implemented to allow the user's generated template to be stored to the JSON file, rather than as it currently is (in React State which does not save from one instance to the next). A Nicer GUI, with more options, and perhaps a search function would also be ideal to streamline user interface. I would also like to try the challange of implementing a non GUI version with the CLI terminal in the language C, rather than a React App.
